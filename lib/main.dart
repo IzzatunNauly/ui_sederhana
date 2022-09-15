@@ -11,10 +11,15 @@ class Layout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        primarySwatch: Colors.red,
+      ),
+      debugShowCheckedModeBanner: false, 
       home: DefaultTabController(
         length: 2,
         child: Scaffold(
           appBar: AppBar(
+            bottom: TabBar(
             tabs: [
               Tab(text: "Berita Terbaru"),
               Tab(text: "Pertandingan Hari Ini"),
@@ -25,34 +30,34 @@ class Layout extends StatelessWidget {
         body:TabBarView(
           children: [
             Layout1(key: this.key,),
-            Layout2(key: this.key,),
+            Layout1(key: this.key,),
           ],
         ),
       )
-      debugShowCheckedModeBanner: false,
+    ),
     );
   }
 }
 
-class Layout1 extends StatefulWidget {
+class Layout1 extends StatelessWidget {
   const Layout1({Key? key}) : super(key: key);
 
 @override
 Widget build(BuildContext context) {
   return Expanded(
-    child: SingleChildScollView(
+    child: SingleChildScrollView(
       child: Container(
-        child: Colomn(
+        child: Column(
           children: [
             Container(
               margin: EdgeInsets.all(6),
               decoration: BoxDecoration(
                 border: Border.all(
                   width: 1,
-                  color: Colors.blue
+                  color: Colors.black
                 )
               ),
-              child: Colomn(
+              child: Column(
                 children: [
                   Container(
                     child:Image(image: AssetImage("images/timnas.jpg"),),
@@ -63,8 +68,9 @@ Widget build(BuildContext context) {
                     child: Text("Timnas Indonesia", style: TextStyle(fontSize: 24),),
                   ),
                   Container(
-                    color: Colors.blue,
-                    alignment: EdgeInsets.all(19),
+                    color: Colors.purpleAccent,
+                    alignment: Alignment.centerLeft,
+                    padding: EdgeInsets.all(19),
                     child: Text("Transfer", style: TextStyle(fontSize: 15, fontWeight: FontWeight.normal),),
                   ),
                 ],
@@ -77,11 +83,11 @@ Widget build(BuildContext context) {
                 )
               ),
               margin: EdgeInsets.fromLTRB(3, 10, 3, 2),
-              child: Colomn(
+              child: Column(
                 children: [
                   Container(
                     decoration: BoxDecoration(
-                      boder: Border.all()
+                      border: Border.all()
                     ),
                     child: Row(
                       children: [
