@@ -82,7 +82,7 @@ Widget build(BuildContext context) {
                   width: 1
                 )
               ),
-              margin: EdgeInsets.fromLTRB(3, 10, 3, 2),
+              margin: EdgeInsets.fromLTRB(2, 8, 2, 2),
               child: Column(
                 children: [
                   Container(
@@ -102,7 +102,7 @@ Widget build(BuildContext context) {
                         Container(
                           alignment: Alignment.centerRight,
                           height: 130,
-                          padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
+                          padding: EdgeInsets.fromLTRB(18, 0, 0, 0),
                           width: (MediaQuery.of(context).size.width / 2) - 12,
                           child: Text("Asnawi cetak gol dengan operan yang bagus")
                         ),
@@ -123,7 +123,7 @@ Widget build(BuildContext context) {
                   width: 1
                 )
               ),
-              margin: EdgeInsets.fromLTRB(3, 10, 3, 2),
+              margin: EdgeInsets.fromLTRB(2, 8, 2, 2),
               child: Column(
                 children: [
                   Container(
@@ -143,7 +143,7 @@ Widget build(BuildContext context) {
                         Container(
                           alignment: Alignment.centerRight,
                           height: 130,
-                          padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
+                          padding: EdgeInsets.fromLTRB(18, 0, 0, 0),
                           width: (MediaQuery.of(context).size.width / 2) - 12,
                           child: Text("Arhan Cetak Gol Lagi"),
                         ),
